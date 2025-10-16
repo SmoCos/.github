@@ -7,19 +7,22 @@
     .title {
       font-weight: 700;
       font-size: 20px;
+      fill: var(--text-strong);
     }
     .desc {
       font-size: 13px;
       fill: var(--text-muted);
     }
+
     .card {
-      fill: var(--bg);
+      fill: var(--card-bg);
       stroke: var(--border);
       stroke-width: 1.2;
       rx: 12;
       ry: 12;
       transition: 0.2s;
     }
+
     a:hover .card {
       fill: var(--hover);
       stroke: var(--accent);
@@ -28,31 +31,37 @@
       fill: var(--accent);
     }
 
+    /* Light mode */
     :root {
-      --bg: #ffffff;
-      --border: #ccc;
+      --card-bg: #ffffff;
+      --border: #d0d7de;
       --hover: #f3f7ff;
       --accent: #1a73e8;
       --text-muted: #555;
+      --text-strong: #111;
     }
+
+    /* Dark mode — LIGHTER cards, high-contrast text */
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #0d1117;
+        --card-bg: #161b22;       /* slightly lighter than page bg */
         --border: #30363d;
-        --hover: #1a1f25;
+        --hover: #1f2630;
         --accent: #58a6ff;
-        --text-muted: #aaa;
+        --text-muted: #c9d1d9;
+        --text-strong: #f0f6fc;
       }
     }
   </style>
 
   <!-- Title -->
   <text x="350" y="35" text-anchor="middle" font-size="22" font-weight="700" fill="var(--accent)">
-    👥 Meet the Team!
+    👥 About the Owners
   </text>
+
   <!-- Owner 2 -->
   <a href="https://github.com/Anloms">
-    <rect class="card" x="380" y="70" width="270" height="150" />
+    <rect class="card" x="50" y="70" width="270" height="150" />
     <text x="185" y="105" class="title" text-anchor="middle">🚀 Aleksandra Smolna</text>
     <text x="185" y="130" class="desc" text-anchor="middle">Software Engineer</text>
     <text x="185" y="155" class="desc" text-anchor="middle">Software Engineer</text>
@@ -61,11 +70,10 @@
 
     <!-- Owner 1 -->
   <a href="https://github.com/Muktim">
-    <rect class="card" x="50" y="70" width="270" height="150" />
+    <rect class="card" x="380" y="70" width="270" height="150" />
     <text x="515" y="105" class="title" text-anchor="middle">🚀 Muktim Coskuner</text>
     <text x="515" y="130" class="desc" text-anchor="middle">Software Engineer</text>
     <text x="515" y="155" class="desc" text-anchor="middle">Software Engineer</text>
     <text x="515" y="185" class="desc" text-anchor="middle">🔗 github.com/Muktim</text>
   </a>
-
 </svg>
