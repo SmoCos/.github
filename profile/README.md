@@ -1,4 +1,4 @@
-<h1> SmoCos - Where software avoids fire!</h1>
+<h1> CosSmo - Where software avoids fire!</h1>
 
 <p> This is a test text</p>
 
